@@ -4,7 +4,7 @@
 </style></head><body><header><h1>E.M. Profª Dalva Dati Ruivo</h1><p>Dalva Atrasos · Registro de atrasos</p></header><main><div class="camera"><video id="video" autoplay muted playsinline></video><div class="guide"></div></div><div id="status" class="status" role="status" aria-live="polite">Conectando…</div><div id="actions"></div><div class="tools"><button id="start">Iniciar câmera</button><button id="switch">Trocar câmera</button><button id="forget">Desvincular aparelho</button></div><small>Posicione uma carteirinha por vez. Afaste o QR após a leitura.</small></main><script src="jsQR.js"></script><script>
 'use strict';
 // ÚNICA CONFIGURAÇÃO PÚBLICA: URL /exec da NOVA implantação do Dalva Atrasos.
-const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzxGoW9QIC1OrvHFbP2jU4yUve2aT-XfuZa0_ThG8TI9K6DzzgelnWkACymd9oZObP_/exec';
+const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbyJKFs6e4UkN0Li9Xuepq64w8SORDsgTe0S23e6Vhn7L0BVQYqMYke7ZWrEwoygh4pj/exec';
 const $=id=>document.getElementById(id),video=$('video'),status=$('status'),actions=$('actions');
 const randomId=()=>Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('');
 let device=localStorage.getItem('dalva_device_atrasos')||'';
